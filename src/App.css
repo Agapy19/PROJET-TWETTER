@@ -12,6 +12,7 @@
 }
 
 body {
+  display: flex;
   height: 100vh;
   max-width: 650px;
   margin-left: auto;
@@ -19,6 +20,7 @@ body {
   padding: 0 10px;
   background: var(--bg-color);
 }
+
 
 .header {
   display: flex;
@@ -76,39 +78,95 @@ body {
   height: 40px;
   margin-left: auto;
 }
+
 p {
-    color: var(--text-color);
-    margin-left: 5%;
-    margin-top: 10px;
-    
- }
- h3 {
+  color: var(--text-color);
+  margin-left: 5%;
+  margin-top: 10px;
+
+}
+
+h3 {
   color: var(--text-color);
   font-size: 20px;
   margin-left: 20px;
- 
+
 }
 
 .tweet-profile {
   display: flex;
   margin-top: 20px;
 }
-.tweet-actions{
+
+.tweet-actions {
   display: flex;
- justify-content: space-evenly;
- /* align-content: center;
+  justify-content: space-evenly;
+  /* align-content: center;
  align-items: center; */
- margin-top: 20px;
- /* margin-left: 10%; */
- gap: 5px;
+  margin-top: 20px;
+  /* margin-left: 10%; */
+  gap: 5px;
 }
 
-span{
+span {
   color: var(--text-color);
   margin-right: 20%;
   margin-top: 5px;
 }
-.tweet-image{
+
+.tweet-image {
   margin-left: 40px;
   margin-top: 15px;
 }
+/* .nav-bar {
+  flex: 0.2;
+  min-width: 250px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+.nav-bar_option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+
+.nav-bar_option h2 {
+  font-weight: 800;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.nav-bar_option :hover {
+  background-color: var(--text-color);
+  border-radius: 30px;
+  color: var(--main-color);
+  transition: color 100ms ease-out;
+}
+
+.btn {
+  width: 30%;
+  background-color: var(--main-color);
+  border: none;
+  color: var(--text-color);
+  font-weight: 900;
+  border-radius: 30px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.nav-bar_logo {
+  color: var(--main-color);
+  font-size: 30px;
+}
+
+.tweets {
+  flex: 0.5;
+  border-right: 1px solid;
+   min-width: fit-content; 
+  width: 1300px;
+} */
