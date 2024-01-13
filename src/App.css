@@ -1,8 +1,8 @@
-* {
-  margin: 0;
+ *{ 
+ margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; 
+ } 
 
 :root {
   --bg-color: black;
@@ -10,18 +10,74 @@
   --main-color: #50b7f5;
   --second-color: rgb(8, 54, 182);
 }
-
-body {
+ body { 
   display: flex;
   height: 100vh;
-  max-width: 650px;
+  max-width: 1300px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 10px;
+  padding: 0 10px; 
   background: var(--bg-color);
 }
+.nav-bar {
+  border-right: 1px solid;
+  flex: 0.2;
+  min-width: 250px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.nav-bar__option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 
+}
 
+.nav-bar__option img {
+  padding: 20px;
+}
+
+.nav-bar__option h2 {
+  font-weight: 800;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.nav-bar__option :hover {
+  background-color: var(--text-color);
+  border-radius: 30px;
+  color: var(--main-color);
+  transition: color 100ms ease-out;
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--main-color);
+  border: none;
+  color: var(--text-color);
+  font-weight: 900;
+  text-transform: inherit;
+  border-radius: 30px;
+  height: 50px;
+  margin-top: 20px;
+  
+}p {
+  color: var(--text-color);
+  margin-left: 5%;
+  margin-top: 10px;
+
+}
+
+h3 {
+  color: var(--text-color);
+  font-size: 20px;
+  margin-left: 20px;
+
+}
+h2 {
+  color: var(--text-color);
+}  
 .header {
   display: flex;
   justify-content: space-between;
@@ -36,7 +92,6 @@ body {
 .top-tweet {
   margin-right: 5%;
 }
-
 .tweet-editor {
   padding-bottom: 10px;
   border-bottom: 8px solid;
@@ -79,19 +134,7 @@ body {
   margin-left: auto;
 }
 
-p {
-  color: var(--text-color);
-  margin-left: 5%;
-  margin-top: 10px;
 
-}
-
-h3 {
-  color: var(--text-color);
-  font-size: 20px;
-  margin-left: 20px;
-
-}
 
 .tweet-profile {
   display: flex;
@@ -101,12 +144,12 @@ h3 {
 .tweet-actions {
   display: flex;
   justify-content: space-evenly;
-  /* align-content: center;
- align-items: center; */
-  margin-top: 20px;
-  /* margin-left: 10%; */
-  gap: 5px;
-}
+   align-content: center;
+ align-items: center; 
+  margin-top: 20px; 
+   margin-left: 10%;
+   gap: 5px;
+} 
 
 span {
   color: var(--text-color);
@@ -118,55 +161,14 @@ span {
   margin-left: 40px;
   margin-top: 15px;
 }
-/* .nav-bar {
-  flex: 0.2;
-  min-width: 250px;
-  margin-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-
-}
-
-.nav-bar_option {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  color: var(--text-color);
-}
-
-
-.nav-bar_option h2 {
-  font-weight: 800;
-  font-size: 20px;
-  margin-right: 20px;
-}
-
-.nav-bar_option :hover {
-  background-color: var(--text-color);
-  border-radius: 30px;
-  color: var(--main-color);
-  transition: color 100ms ease-out;
-}
-
-.btn {
-  width: 30%;
-  background-color: var(--main-color);
-  border: none;
-  color: var(--text-color);
-  font-weight: 900;
-  border-radius: 30px;
-  height: 50px;
-  margin-top: 20px;
-}
-
-.nav-bar_logo {
-  color: var(--main-color);
-  font-size: 30px;
-}
-
 .tweets {
   flex: 0.5;
   border-right: 1px solid;
-   min-width: fit-content; 
+  min-width: fit-content;
   width: 1300px;
+}
+
+
+/* .app{
+display: flexbox;
 } */
