@@ -6,7 +6,8 @@ export default function Navbar(props) {
             </div>
             <div className="nav-bar__option">
                 <img src={props.icon} alt="" />
-                <h2>{props.name} </h2>
+                <h2 >{props.name}</h2>
+                {/* <h2> </h2> */}
             </div>
         </div >
 
