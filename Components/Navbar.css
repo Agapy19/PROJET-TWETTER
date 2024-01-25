@@ -52,7 +52,7 @@ button {
     background: unset;
     border: unset;
 }
-nav .selected{
+ .selected:active{
     color: #1da1f2;
 }
 .tweet{

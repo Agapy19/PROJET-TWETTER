@@ -1,5 +1,9 @@
 export default function Profile() {
-    return(
-        <h1>Aga</h1>
+    return (
+        <div>
+            <h1>Mafo Agapy</h1>
+            <img src="Images/Private.png" alt="" />
+        </div>
+
     )
 }
