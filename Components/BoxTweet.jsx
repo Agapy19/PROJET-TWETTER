@@ -4,8 +4,8 @@ function TweetBox() {
         <div className="tweet-editor">
             <form>
                 <div className="tweet-editor__input">
-                    <div className="avatar">
-                        <img src="Images/Profile-Photo.png" alt="" />
+                    <div className="photo">
+                        <img src="Images/aga.jpeg" alt="" />
                     </div>
                     <input type="text" placeholder="What's happening?" />
                 </div>

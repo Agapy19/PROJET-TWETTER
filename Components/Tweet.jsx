@@ -1,3 +1,4 @@
+
 export default function Tweet(props) {
     return (
         <div className="tweet">
@@ -13,13 +14,14 @@ export default function Tweet(props) {
                 <img src={props.image} alt="" />
             </div>
             <div className="tweet-actions">
-                <img src="Images/Reply.png" alt="" />
+                <img src="Images/reply.png" alt="" />
                 <span> {props.reply} </span>
                 <img src="Images/icon-epingle.png" alt="" />
                 <span> {props.epingle} </span>
-                <img src="Images/icon-like.png" alt="" />
+                <img src="Images/heart-solid.svg" alt="" className='icon' />
                 <span> {props.like} </span>
-                <img src="Images/buton-telecharge.png" alt="" />
+                <img src="Images/telecharge.png" alt="" />
+
             </div>
         </div>
 
