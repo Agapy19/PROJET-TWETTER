@@ -5,7 +5,7 @@
 
  :root {
    --bg-color: #000000;
-   --second-bg-color: rgb(22,23,31);
+   --second-bg-color: rgb(22, 23, 31);
    --text-color: #fff;
    --main-color: #1da1f2;
 
@@ -53,7 +53,8 @@
 
  /* FEED  */
  .timeline {
-   flex: 5;
+   /* flex: 5; */
+   max-width: 750px;
 
 
 
@@ -149,6 +150,12 @@
    margin-top: 20px;
  }
 
+ .tweet-profile img {
+   border-radius: 100%;
+   height: 2.5em;
+   width: 2.5em;
+ }
+
  .tweet-actions {
    display: flex;
    justify-content: space-evenly;
@@ -171,10 +178,17 @@
    height: 20px;
  }
 
- .tweet-image {
-   margin-left: 40px;
+ .tweet-image img {
+   margin-left: 10%;
    margin-top: 15px;
+   width: 80%;
+   min-height: 5%;
+   border-radius: 30px;
  }
+
+ /* .tweet-image p{
+text-align: center;
+ } */
 
  .tweet-profile__verified span {
    font-weight: 600;
@@ -281,44 +295,62 @@
    font-size: 1em;
    margin-top: 0.5em;
 
- } 
+ }
 
- /* .widgets__follow {
-  margin-top: 30px;
-  background-color: var(--second-color);
-} */
  .mytweet-profile {
    display: flex;
    margin-top: 20px;
  }
 
- /* .mytweet-profile__header {
-  display: flex;
-}
+ .mytweet span {
+   margin-left: 10%;
+   font-size: 12px;
+ }
 
 
-.mytweet span {
-  margin-left: 10%;
-  font-size: 12px;
-}
-
-
- */
-
- /* .mytweet-profile__img {
+ /* PROFILE */
+ .profile-header {
+   margin-top: 10%;
+ }
+ .profile-header__prem {
    display: flex;
-   justify-content: space-between;
- } */
+   gap: 10px;
+ }
 
- /* 
+ .profile-header__prem img {
+   width: 5%;
+   height: 5%;
+ }
+ .profile-header__prem  h2{
+ margin-top: 3px;
+}
 
- 
 
+ .profile-header__image {
+   display: flex;
+   gap: 40%;
+   /* margin-bottom: 20%; */
+   margin-left: 10%;
 
- 
+ }
 
- 
+ .profile-header__title {
+   display: flex;
+   gap: 10px;
+ }
 
- .icon {
-   color: #bb1122;
- } */
+ .profile {
+   border-radius: 100%;
+   width: 4.5em;
+   height: 3.5em;
+
+ }
+
+ .btn-config {
+   border: none;
+   background: var(--text-color);
+   color: var(--bg-color);
+   font-weight: 500 !important;
+   border-radius: 30%;
+   width: 30%;
+ }

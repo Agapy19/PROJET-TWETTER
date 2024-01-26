@@ -97,6 +97,8 @@ footer{
     border-radius: 100%;
 }
 .name{
+    display: flex;
+    gap: 10px;
     font-weight: 700;
 }
 .username{

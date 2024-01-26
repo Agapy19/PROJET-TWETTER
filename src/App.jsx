@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -8,22 +8,34 @@ import Feed from '../Components/Feed'
 import Widget from '../Components/Widget'
 import Profile from './Profile';
 function App() {
+  const [tweets, setTweets] = useState([]);
+  useEffect(() => {
+    fetchData();
+  }, [])
+  const fetchData = async () => {
+    await fetch('https://jsonplaceholder.typicode.com/tweets')
+      .then((res) => res.json)
+      .then((data) => setTweets(data))
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+  console.log(tweets);
   return (
+
     <body>
       <BrowserRouter>
         <div className="app">
           <Navbar />
           <Routes>
-            <Route path="/"  element= {<Feed/>}/>
-            {/* <Route path="/explore">Explore</Route>
-            <Route path="/notification" >Notification</Route>
-            <Route path="/message" >Message</Route>
-            <Route path="/mookmarks" >Bookmarks</Route>
-            <Route path="/lists" >Lists</Route> */}
-            <Route path="/profile"element={<Profile/>} ></Route>
-            {/* <Route path="/more" >More</Route> */}
+            <Route path="/" element={<Feed />} />
+            <Route path="/profile" element={<Profile />} ></Route>
           </Routes>
-          {/* <Feed /> */}
+          {/* {
+            tweets.map((tweet) => (
+              tweet
+            ))
+          } */}
           <Widget />
         </div >
       </BrowserRouter>

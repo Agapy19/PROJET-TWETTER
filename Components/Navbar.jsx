@@ -41,7 +41,10 @@ function Navbar() {
                                 alt="" />
                         </div>
                         <div>
-                            <div className='name'>Agapy Mafo</div>
+                            <div className='name'>
+                                Agapy Mafo
+                                <img src="Images/Private.png" alt="" />
+                            </div>
                             <div className='username'>@agapymk</div>
                         </div>
                     </button>
