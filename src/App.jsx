@@ -7,20 +7,9 @@ import Navbar from '../Components/Navbar'
 import Feed from '../Components/Feed'
 import Widget from '../Components/Widget'
 import Profile from './Profile';
+import axios from 'axios';
 function App() {
-  const [tweets, setTweets] = useState([]);
-  useEffect(() => {
-    fetchData();
-  }, [])
-  const fetchData = async () => {
-    await fetch('https://jsonplaceholder.typicode.com/tweets')
-      .then((res) => res.json)
-      .then((data) => setTweets(data))
-      .catch((err) => {
-        console.log(err);
-      })
-  }
-  console.log(tweets);
+  
   return (
 
     <body>
