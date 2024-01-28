@@ -7,7 +7,6 @@ import Navbar from '../Components/Navbar'
 import Feed from '../Components/Feed'
 import Widget from '../Components/Widget'
 import Profile from './Profile';
-import axios from 'axios';
 function App() {
   
   return (
@@ -20,11 +19,6 @@ function App() {
             <Route path="/" element={<Feed />} />
             <Route path="/profile" element={<Profile />} ></Route>
           </Routes>
-          {/* {
-            tweets.map((tweet) => (
-              tweet
-            ))
-          } */}
           <Widget />
         </div >
       </BrowserRouter>

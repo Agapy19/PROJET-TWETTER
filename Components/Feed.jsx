@@ -2,20 +2,17 @@ import React from 'react'
 import BoxTweet from './BoxTweet';
 import Post from './Post';
 import axios from 'axios';
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 function Feed() {
     const [tweets, setTweets] = useState([]);
-    useEffect(()=>{
+    useEffect(() => {
         axios.get('https://my-json-server.typicode.com/amare53/twiterdb/posts')
-        .then((res) =>{
-            console.log(res);
-           setTweets(res.data)
-        })
-        // .catch((error) => {
-        //     console.log(error);
-        // } )
-    },[])
-   
+            .then((res) => {
+                console.log(res.data);
+                setTweets(res.data)
+            })
+    }, [])
+
     return (
 
         <div className="timeline ">
@@ -34,9 +31,9 @@ function Feed() {
                 <BoxTweet />
             </div>
             {/* Post */}
-            {tweets.map((item)=>{
-                <Post titre={item.userId} avatar={item.url} text={item.body} retweets={item.repost} />
-            })}
+            {tweets.map((item) =>
+                <Post titre={item.id}  id={item.userId} avatar={item.thumbnailUrl} text={item.body} retweets={item.repost} image={item.url}/>
+            )}
         </div>
     )
 }

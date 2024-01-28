@@ -27,7 +27,7 @@ function Widget() {
                     <Follow image="Images/cnn-Profile-Photo.png" titre="CNN" p="@CNN" />
                     <Follow image="Images/newyork.png" titre="New" p="@nytimes" />
                     <button className="mybtn">Show more</button>
-                   
+
                 </div>
             </div>
         </div>

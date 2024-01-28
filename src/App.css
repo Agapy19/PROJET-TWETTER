@@ -159,6 +159,10 @@
    width: 2.5em;
  }
 
+ .tweet-profile h2{
+  margin-left: 5%;
+ }
+
  .tweet-actions {
    display: flex;
    justify-content: space-evenly;

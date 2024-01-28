@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Json from '/src/tweets-x.json'
 
-
-
 function Post(props) {
     const  {
         avatar,
@@ -21,22 +19,14 @@ function Post(props) {
         console.log(count);
         setLike(!like)
 
-
-
     }
-
-
     return (
         <div className="Tweet">
             <div className="tweet-profile">
                 <img src={avatar} alt="" />
                 <h2> {titre} </h2>
                 <div className="tweet-profile__verified">
-                    {/* {(tweet.isVerified == true) && <img src="Images/verified.png" alt="" />} */}
-
                 </div>
-
-                {/* <span>  {FormData(tweet.date)}min </span> */}
             </div>
             <span>@{id} </span>
             <div className="tweet-image">
@@ -51,7 +41,6 @@ function Post(props) {
                 {!like && <img onClick={handleClick} src="Images/icon-like.png" alt="" />}
                 {like && <img onClick={handleClick} src="Images/heart-solid.svg" alt="" className="icon" />}
                 <span>{count} </span>
-                {/* <p> {tweet.favorites} </p> */}
                 <img src="Images/telecharge.png" alt="" />
             </div>
 
