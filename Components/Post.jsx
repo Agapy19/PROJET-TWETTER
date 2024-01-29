@@ -4,12 +4,12 @@ import Json from '/src/tweets-x.json'
 function Post(props) {
     const  {
         avatar,
-        titre,
-        id,
+        userName,
         text,
         image,
         replies,
-        retweets
+        retweets,
+        nom
 
     }= props
     const [count, setCount] = useState(0);
@@ -24,11 +24,11 @@ function Post(props) {
         <div className="Tweet">
             <div className="tweet-profile">
                 <img src={avatar} alt="" />
-                <h2> {titre} </h2>
+                <h2> {nom} </h2>
                 <div className="tweet-profile__verified">
                 </div>
             </div>
-            <span>@{id} </span>
+            <span>@{userName} </span>
             <div className="tweet-image">
                 <p> {text} </p>
                 {(image)} && <img src={image} alt="" />

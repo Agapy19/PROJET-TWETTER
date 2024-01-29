@@ -12,6 +12,14 @@ function Feed() {
                 setTweets(res.data)
             })
     }, [])
+    const [users, setUsers] = useState([]);
+    useEffect(() => {
+        axios.get('https://my-json-server.typicode.com/amare53/twiterdb/users')
+            .then((res) => {
+                console.log(res.data);
+                setUsers(res.data)
+            })
+    }, [])
 
     return (
 
@@ -32,7 +40,7 @@ function Feed() {
             </div>
             {/* Post */}
             {tweets.map((item) =>
-                <Post titre={item.id}  id={item.userId} avatar={item.thumbnailUrl} text={item.body} retweets={item.repost} image={item.url}/>
+                <Post userName={users.find((user) => user.id==item.userId)?.username}  id={item.userId} avatar={users.find((user) => user.id==item.userId)?.profil} text={item.body} retweets={item.repost} image={item.url} nom={users.find((user) => user.id==item.userId)?.name} />
             )}
         </div>
     )
