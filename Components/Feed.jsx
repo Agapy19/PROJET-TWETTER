@@ -23,24 +23,19 @@ function Feed() {
 
     return (
 
-        <div className="timeline ">
-            <div className="tweets">
-                {/* Home */}
-                <div className="header">
-                    <div className="page-title">
-                        <h2>Home</h2>
-                    </div>
-                    <div className="top-tweet">
-                        <img src="Images/top-Tweets.svg" alt="" />
-                    </div>
-
+        <div className="feed ">
+            {/* Home */}
+            <div className="feed-header">
+                <h2>Home</h2>
+                <div className="top-tweet">
+                    <img src="Images/top-Tweets.svg" alt="" />
                 </div>
-                {/* Tweet box */}
-                <BoxTweet />
             </div>
+            {/* Tweet box */}
+            <BoxTweet />
             {/* Post */}
             {tweets.map((item) =>
-                <Post userName={users.find((user) => user.id==item.userId)?.username}  id={item.userId} avatar={users.find((user) => user.id==item.userId)?.profil} text={item.body} retweets={item.repost} image={item.url} nom={users.find((user) => user.id==item.userId)?.name} />
+                <Post userName={users.find((user) => user.id == item.userId)?.username} id={item.userId} avatar={users.find((user) => user.id == item.userId)?.profil} text={item.body} retweets={item.repost} image={item.url} nom={users.find((user) => user.id == item.userId)?.name} />
             )}
         </div>
     )

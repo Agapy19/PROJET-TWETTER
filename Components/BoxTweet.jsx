@@ -1,16 +1,16 @@
 import Actions from "./Actions";
 function TweetBox() {
     return (
-        <div className="tweet-editor">
+        <div className="boxtweet">
             <form>
-                <div className="tweet-editor__input">
+                <div className="boxtweet__input">
                     <div className="photo">
                         <img src="Images/aga.jpeg" alt="" />
                     </div>
                     <input type="text" placeholder="What's happening?" />
                 </div>
-                <div className="tweet-editor__buttons">
-                    <Actions styleName="tweet-editor__actions" />
+                <div className="boxtweet__buttons">
+                    <Actions styleName="boxtwet__actions" />
                     <button className="button">Tweet</button>
                 </div>
             </form>

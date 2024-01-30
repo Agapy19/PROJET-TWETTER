@@ -23,11 +23,11 @@ function Widget() {
                     <button className="mybtn">Show more</button>
                 </div>
                 <div className="mytweet">
-                    <h4>How to follow</h4>
+                    <h2>How to follow</h2>
                     <Follow image="Images/cnn-Profile-Photo.png" titre="CNN" p="@CNN" />
                     <Follow image="Images/newyork.png" titre="New" p="@nytimes" />
                     <button className="mybtn">Show more</button>
-
+                   
                 </div>
             </div>
         </div>

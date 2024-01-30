@@ -2,6 +2,7 @@
 // import './Profile.css'
 function Profile() {
     return (
+
         <div className="profile-header">
             <div className="profile-header__prem">
                 <img src="Images/arrow-left-solid.svg" alt="" />

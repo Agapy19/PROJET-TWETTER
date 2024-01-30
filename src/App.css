@@ -1,6 +1,7 @@
  * {
    margin: 0;
    padding: 0;
+   box-sizing: border-box;
  }
 
  :root {
@@ -11,20 +12,19 @@
 
  }
 
- .rigth-pane {
-   background: var(--second-bg-color);
+ body {
+    background: var(--bg-color);
  }
-
 
  .app {
-   /* font-family: 'Segoe UI', Georgia, 'Times New Roman', Times, serif; */
-   display: grid;
-   grid-template-columns: 1.1fr 2.1fr 1.4fr;
+   display: flex;
+   height: 100;
+   max-width: 1300px;
+   margin-left: auto;
+   margin-right: auto;
    background: var(--bg-color);
-   color: var(--text-color);
-   height: 100%;
-   width: 100%;
  }
+
 
  /* NAVBAR */
 
@@ -39,6 +39,7 @@
    color: var(--text-color);
    font-size: 20px;
    margin-left: 20px;
+   font-family: 'Segoe UI', Georgia, 'Times New Roman', Times, serif;
 
  }
 
@@ -49,30 +50,16 @@
 
  span {
    color: var(--text-color);
-  
+
  }
 
  /* FEED  */
- .timeline {
-   /* flex: 5; */
-   max-width: 750px;
-
-
-
-
+ .feed {
+  min-width: 650px;
  }
 
- .timeline::-webkit-scrollbar {
-   display: none;
- }
 
- .timeline {
-   -ms-overflow-style: none;
-   scrollbar-width: none;
-
- }
-
- .header {
+ .feed-header {
    display: flex;
    justify-content: space-between;
    padding: 15px 20px;
@@ -80,22 +67,23 @@
  }
 
  /* TWEETBOX */
- .tweet-editor {
+ .boxtwet {
    padding-bottom: 10px;
+   border-bottom: 8px solid var(--bg-color);
    padding-right: 10px;
  }
 
- .tweet-editor form {
+ .boxtweet form {
    display: flex;
    flex-direction: column;
  }
 
- .tweet-editor__input {
-   padding: 20px;
+ .boxtweet__input {
    display: flex;
+   padding: 20px;
  }
 
- .tweet-editor__input input {
+ .boxtweet__input input {
    flex: 1;
    margin-left: 20px;
    font-size: 20px;
@@ -105,19 +93,22 @@
    color: var(--text-color);
  }
 
- .avatar {
-   border: none;
-   padding: 10px;
+ .boxtweet__input input:focus {
    outline: none;
  }
 
- .tweet-editor__buttons {
+ .avatar {
+   border: none;
+   padding: 15px;
+ }
+
+ .boxtweet__buttons {
    display: flex;
    justify-content: space-between;
    padding: 10%;
  }
 
- .tweet-actions {
+ .boxtwet__actions {
    display: flex;
    justify-content: space-evenly;
    align-content: center;
@@ -127,7 +118,7 @@
    gap: 5px;
  }
 
- .tweet-actions span {
+ .boxtwet__actions span {
    margin-right: 20%;
  }
 
@@ -135,82 +126,79 @@
 
    display: block;
    background: #1da1f2;
-   color: #fff;
    width: 9em;
-   height: 3em;
-   border-radius: 1.5em;
-   font-size: 1em;
-   margin-top: 0.5em;
-   margin-left: 3.5em;
+   border: none !important;
+   color: white !important;
+   font-weight: 700 !important;
+   text-transform: inherit !important;
+   border-radius: 20px !important;
+   height: 40px !important;
+   /* margin-top: 10px !important; */
+   margin-left: auto !important;
  }
 
- /* TWEET */
-.Tweet span{
-  margin-left: 7%;
+ /* Post */
+ .post-headerText{
+  display:flex;
+
+ }
+ .post-img {
+  border-radius: 20px;
+  width: 100%;
 }
- .tweet-profile {
-   display: flex;
-   margin-top: 20px;
- }
-
- .tweet-profile img {
-   border-radius: 100%;
-   height: 2.5em;
-   width: 2.5em;
- }
-
- .tweet-profile h2{
-  margin-left: 5%;
- }
-
- .tweet-actions {
-   display: flex;
-   justify-content: space-evenly;
-   align-content: center;
-   align-items: center;
-   margin-top: 20px;
-   margin-left: 10%;
-   gap: 5px;
- }
-
- .tweet-actions p {
-   color: var(--text-color);
-   margin-right: 20%;
-   margin-top: 5px;
- }
-
- .tweet-actions .icon {
-   border-radius: 50%;
-   width: 20px;
-   height: 20px;
- }
-
- .tweet-image img {
-   margin-left: 10%;
-   margin-top: 15px;
-   width: 80%;
-   min-height: 5%;
-   border-radius: 30px;
- }
-
- /* .tweet-image p{
-text-align: center;
- } */
-
- .tweet-profile__verified span {
-   font-weight: 600;
-   font-size: 15px;
-   color: #8899a6;
- }
+.post {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--bg-color);
+}
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.post-badge {
+  font-size: 10px !important;
+  color: var(--twitter-color);
+}
+.post-headerSpecial {
+  font-weight: 600;
+  font-size: 12px;
+}
+.post-headerText > h3 {
+  font-size: 20px;
+  font-family: 'Segoe UI', Georgia, 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+.post-headerDescription {
+  font-size: 15px;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Georgia, 'Times New Roman', Times, serif;
+  color: #8899a6;
+}
+.post-body {
+  flex: 1;
+  padding: 10px;
+}
+.post-avatar {
+  padding: 20px;
+  border-radius: 100%;
+  height: 2.5em;
+  width: 2.5em;
+  background: #192734;
+  margin-left: 3.5em;
+}
 
  /* WIDGETS  */
  .widgets {
+   flex: 2;
    min-height: 100vh;
-   max-width: 275px;
+   min-width: 275px;
+   margin-right: 3%;
    margin-top: 20px;
-   padding-left: 5.3em;
  }
-
+ .widgets::-webkit-scrollbar {
+  display: none;
+}
  .widgets__input {
    display: flex;
    align-items: center;
@@ -249,9 +237,9 @@ text-align: center;
    width: 200px;
  }
 
- .widgets__widget-contain__trending {
+ /* .widgets__widget-contain__trending {
    margin-top: 20px;
- }
+ } */
 
  .widgets__widget-contain__trending h2 {
    font-size: 1em;
@@ -276,7 +264,7 @@ text-align: center;
    background: var(--second-bg-color);
    border: none;
    font-weight: 500;
-   margin-bottom: 20px;
+  
  }
 
  /* FOLLOW */
@@ -286,6 +274,11 @@ text-align: center;
    padding: 20px;
    background-color: var(--second-bg-color);
    border-radius: 20px;
+ }
+ .mytweet h2{
+  color: var(--text-color);
+  font-size: 18px;
+   font-weight: 800;
  }
 
  .btn-follow {
@@ -308,6 +301,9 @@ text-align: center;
    display: flex;
    margin-top: 20px;
  }
+ .mytweet-profile h4{
+  color: var(--text-color);
+}
 
  .mytweet span {
    margin-left: 10%;
@@ -319,6 +315,7 @@ text-align: center;
  .profile-header {
    margin-top: 10%;
  }
+
  .profile-header__prem {
    display: flex;
    gap: 10px;
@@ -328,9 +325,10 @@ text-align: center;
    width: 5%;
    height: 5%;
  }
- .profile-header__prem  h2{
- margin-top: 3px;
-}
+
+ .profile-header__prem h2 {
+   margin-top: 3px;
+ }
 
 
  .profile-header__image {
@@ -360,4 +358,9 @@ text-align: center;
    font-weight: 500 !important;
    border-radius: 30%;
    width: 30%;
+ }
+ .icon{
+  border-radius: 100%;
+  height: 2.5em;
+  width: 2.5em;
  }
