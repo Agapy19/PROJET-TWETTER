@@ -8,10 +8,11 @@ import Feed from '../Components/Feed'
 import Widget from '../Components/Widget'
 import Profile from './Profile';
 import axios from 'axios';
+import { useState, useEffect } from 'react'
 function App() {
   const [persons, setPersons] = useState([]);
   useEffect(() => {
-      axios.get('https://my-json-server.typicode.com/amare53/twiterdb/Users')
+      axios.get('https://my-json-server.typicode.com/amare53/twiterdb/users')
           .then((res) => {
               console.log(res.data);
               setPersons(res.data)
