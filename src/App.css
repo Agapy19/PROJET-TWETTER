@@ -9,7 +9,7 @@
   --second-bg-color: rgb(22, 23, 31);
   --text-color: #fff;
   --main-color: #1da1f2;
-  --border-color:rgb(65, 65, 65) ;
+  --border-color: rgb(65, 65, 65);
 
 }
 
@@ -58,6 +58,7 @@ span {
 .feed {
   min-width: 650px;
   border: 1px solid var(--border-color);
+  margin-right: 15px;
 
 }
 
@@ -152,6 +153,7 @@ span {
 .post-img {
   border-radius: 20px;
   width: 100%;
+
 }
 
 .post {
@@ -191,7 +193,7 @@ span {
 
 .post-body {
   flex: 1;
-  padding: 10px;
+  padding-right: 40px;
 }
 
 .post-avatar {
@@ -332,12 +334,28 @@ span {
 
 /* PROFILE */
 .profile-header {
-  margin-top: 10%;
+  margin-top: 4%;
+  border: 1px solid var(--border-color);
 }
 
 .profile-header__prem {
   display: flex;
   gap: 10px;
+  border-top: 1px solid var(--border-color);
+}
+
+.profile-header__duo {
+  background-color: gray;
+  height: 30%;
+  min-width: 650px;
+ 
+}
+.profile-header__tri{
+  margin-left: 7%;
+}
+
+.profile-header__prem h1 {
+  color: #fff;
 }
 
 .profile-header__prem img {
@@ -365,8 +383,9 @@ span {
 
 .profile {
   border-radius: 100%;
-  width: 4.5em;
-  height: 3.5em;
+  width: 20%;
+  height: 20%;
+  margin-top: -50px;
 
 }
 

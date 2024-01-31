@@ -1,5 +1,5 @@
 import { useState } from "react"
-function Post({avatar, userName, text, image, replies, retweets,  nom}) {
+function Post({ avatar, userName, text, image, replies, retweets, nom }) {
 
     const [count, setCount] = useState(0);
     const [like, setLike] = useState(false);

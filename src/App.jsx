@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Feed />} />
           {persons.map((info) =>
-          <Route path="/profile" element={<Profile />} ></Route>
+          <Route path="/profile" element={<Profile nom={info.name} profile={info.profil} email={info.email} join={info.Joined} photo={info.thumbnailProfil} userName={info.username} />} ></Route>
           )}
         </Routes>
         <Widget />
