@@ -334,7 +334,7 @@ span {
 
 /* PROFILE */
 .profile-header {
-  margin-top: 4%;
+ 
   border: 1px solid var(--border-color);
 }
 
@@ -375,6 +375,16 @@ span {
   margin-left: 10%;
 
 }
+.profile-header__image button{
+  background-color:var(--bg-color);
+  color: var(--text-color);
+  width: 6em;
+  height: 2em;
+  border-radius: 1.5em;
+  margin-top: 15px;
+  margin-left: 15%;
+  border: 1px solid var(--border-color);
+}
 
 .profile-header__title {
   display: flex;
@@ -388,6 +398,12 @@ span {
   margin-top: -50px;
 
 }
+.profile-header__post{
+  margin-top: 15px;
+  /* margin-left: 20px; */
+  padding: 20px;
+}
+
 
 .btn-config {
   border: none;

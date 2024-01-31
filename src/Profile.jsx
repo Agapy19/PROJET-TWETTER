@@ -1,4 +1,9 @@
 //  import './Profile.css'
+
+
+import Follow from "../Components/Follow";
+import ProfileNav from "../ProfileNav";
+
 // import './Profile.css'
 function Profile({ profile, nom, paragraph, photo, email, join, userName }) {
     return (
@@ -15,7 +20,7 @@ function Profile({ profile, nom, paragraph, photo, email, join, userName }) {
 
             <div className="profile-header__image">
                 <img src={profile} alt="" className="profile" />
-                <button>Editer le profile</button>
+                <button>Edit profil</button>
             </div>
             <div className="profile-header__tri">
                 <div className="profile-header__title">
@@ -25,7 +30,16 @@ function Profile({ profile, nom, paragraph, photo, email, join, userName }) {
                 <p>{email}</p>
                 <p>{join}</p>
             </div>
+            <div className="profile-nav">
+            <ProfileNav />
+            </div>
+            <div className="profile-header__post">
+                <h2>How to follow</h2>
+                <Follow image="src/Images/cnn-Profile-Photo.png" titre="CNN" p="@CNN" />
+                <Follow image="src/Images/newyork.png" titre="New" p="@nytimes" />
+            </div>
         </div>
+
     )
 }
 export default Profile;
