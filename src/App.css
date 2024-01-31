@@ -385,6 +385,9 @@ span {
   margin-left: 15%;
   border: 1px solid var(--border-color);
 }
+.profile-header__image button:hover{
+  background-color: gainsboro;
+}
 
 .profile-header__title {
   display: flex;
@@ -404,7 +407,9 @@ span {
   padding: 20px;
 }
 
-
+.profile-nav{
+  border-bottom: 1px solid var(--border-color);
+}
 .btn-config {
   border: none;
   background: var(--text-color);

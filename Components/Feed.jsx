@@ -32,9 +32,12 @@ function Feed() {
                 </div>
             </div>
             {/* Tweet box */}
-            <BoxTweet />
+          
+            <BoxTweet  />
+           
             {/* Post */}
             {tweets.map((item) =>
+            
                 <Post userName={users.find((user) => user.id == item.userId)?.username} id={item.userId} avatar={users.find((user) => user.id == item.userId)?.profil} text={item.body} retweets={item.repost} image={item.url} nom={users.find((user) => user.id == item.userId)?.name} />
             )}
         </div>

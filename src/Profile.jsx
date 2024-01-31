@@ -1,10 +1,5 @@
-//  import './Profile.css'
-
-
 import Follow from "../Components/Follow";
 import ProfileNav from "../ProfileNav";
-
-// import './Profile.css'
 function Profile({ profile, nom, paragraph, photo, email, join, userName }) {
     return (
 
